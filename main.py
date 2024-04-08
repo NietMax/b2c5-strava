@@ -26,4 +26,4 @@ data = get_strava_data()
 if data is not None:
     print(data)
 else:
-    print("Failed to get data from Strava API | Or no data available")
+    print("No data received from Strava API")
