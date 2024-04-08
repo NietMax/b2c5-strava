@@ -1,11 +1,16 @@
-
 # General imports for calling the Strava API
 import requests
-import pandas as pd
+import os
+from dotenv import load_dotenv
+
+# Load the environment variables
+load_dotenv()
+
 
 def get_strava_data():
-    url = "https://www.strava.com/api/v3/activities/"
-    headers = {"Authorization": "Bearer f2852e3c857f6aa06aa4771c09510da7d29ab91e"}
+    url = "https://www.strava.com/api/v3/athlete"
+    bearer_token = os.getenv("BearerToken")
+    headers = {"Authorization": f"Bearer ${bearer_token}"}
 
     response = requests.get(url, headers=headers)
 
@@ -13,12 +18,12 @@ def get_strava_data():
         print("Success! Code" + str(response.status_code))
         return response.json()
     else:
+        print("Failed to get data from Strava API | Or no data available")
         return None
+
 
 data = get_strava_data()
 if data is not None:
-    # Convert the data to a pandas DataFrame and print it
-    df = pd.DataFrame([data])
-    print(df)
+    print(data)
 else:
     print("Failed to get data from Strava API | Or no data available")
