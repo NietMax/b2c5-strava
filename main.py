@@ -9,8 +9,8 @@ load_dotenv()
 
 def get_strava_data():
     url = "https://www.strava.com/api/v3/athlete"
-    bearer_token = os.getenv("BearerToken")
-    headers = {"Authorization": f"Bearer ${bearer_token}"}
+    bearer_token = os.getenv("BEARER_TOKEN")
+    headers = {"Authorization": f"Bearer {bearer_token}"}
 
     response = requests.get(url, headers=headers)
 
