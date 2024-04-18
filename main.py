@@ -1,12 +1,13 @@
 from datetime import datetime
 from pathlib import Path
 import shutil
-
 import pandas as pd
 
 from src.api_methods import authorize
 from src.api_methods import get_methods
 from src.data_preprocessing import main as data_prep
+from src.data_visualisation.visualisations import visualize_data
+
 
 ACTIVITIES_PER_PAGE = 200
 PAGE_NUMBER = 1
@@ -38,6 +39,9 @@ def main():
     df.to_csv(data_dir / f'my_activity_data={timestamp}.csv', sep=',', index=False)
     df = df.transpose()
     print(df)
+
+    # Call the visualize_data function
+    visualize_data()
 
 
 if __name__ == '__main__':
