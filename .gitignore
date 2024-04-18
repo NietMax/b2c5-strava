@@ -33,3 +33,9 @@ node_modules/
 .pytest_cache
 
 *.csv
+
+# PyCharm files
+.idea/
+
+# Environments
+env
