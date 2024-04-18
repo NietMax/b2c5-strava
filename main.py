@@ -12,6 +12,8 @@ from src.data_visualisation.visualisations import visualize_data
 ACTIVITIES_PER_PAGE = 200
 PAGE_NUMBER = 1
 
+CLEAN_DATA_DIR = True
+
 GET_ALL_ACTIVITIES_PARAMS = {
     'per_page': ACTIVITIES_PER_PAGE,
     'page': PAGE_NUMBER
@@ -29,9 +31,12 @@ def clean_data_directory(directory: Path):
 def main():
     data_dir = Path('data')
     data_dir.mkdir(exist_ok=True)  # Create the directory if it doesn't exist
-    clean_data_directory(data_dir)
+    if CLEAN_DATA_DIR:
+        clean_data_directory(data_dir)
+    else:
+        print('Data directory not cleaned (user specified).')
 
-    token = authorize.get_acces_token()
+    token = authorize.get_access_token()
     data = get_methods.access_activity_data(token, params=GET_ALL_ACTIVITIES_PARAMS)
     df = data_prep.preprocess_data(data)
     df = pd.DataFrame(df)
