@@ -10,5 +10,8 @@ python -m pip install --upgrade pip
 # Install the required modules
 pip install -r requirements.txt.
 
+# Feedback on the installed modules
+echo "Installed modules all packages"
+
 # Run your script
 python main.py
