@@ -1,0 +1,3 @@
+environs
+pandas
+Requests
