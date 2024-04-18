@@ -1,6 +1,7 @@
 import subprocess
 from datetime import datetime
 from pathlib import Path
+import shutil
 
 import pandas as pd
 
@@ -15,10 +16,6 @@ GET_ALL_ACTIVITIES_PARAMS = {
     'per_page': ACTIVITIES_PER_PAGE,
     'page': PAGE_NUMBER
 }
-
-
-def install_requirements():
-    subprocess.check_call(["python", '-m', 'pip', 'install', '-r', 'requirements.txt'])
 
 
 def clean_data_directory(directory: Path):
@@ -45,5 +42,4 @@ def main():
 
 
 if __name__ == '__main__':
-    install_requirements()
     main()
