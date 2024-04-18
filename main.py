@@ -31,6 +31,7 @@ def clean_data_directory(directory: Path):
 
 def main():
     data_dir = Path('data')
+    data_dir.mkdir(exist_ok=True)  # Create the directory if it doesn't exist
     clean_data_directory(data_dir)
 
     token = authorize.get_acces_token()
