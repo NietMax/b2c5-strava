@@ -1,3 +1,7 @@
 environs
 pandas
 Requests
+plotly
+seaborn
+matplotlib
+kaleido
