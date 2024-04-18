@@ -35,3 +35,5 @@ def visualize_data():
     # Plotly
     fig = px.scatter(df, x='distance', y='moving_time', color='type')
     fig.write_image('src/data_visualisation/figures/plotly_figure.png')
+
+    print('Data visualisation complete!')

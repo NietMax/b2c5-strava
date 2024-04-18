@@ -39,3 +39,6 @@ node_modules/
 
 # Environments
 env
+
+# Visualisations
+src/data_visualisation/figures

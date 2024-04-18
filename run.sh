@@ -16,3 +16,9 @@ echo "Installed modules all packages"
 
 # Run your script
 python main.py
+
+# Feedback on completion
+echo "Process completed successfully."
+
+# Stop bash script
+exit 0
