@@ -41,11 +41,11 @@ def visualize_data():
     plt.close()
 
     # Plotly
-    fig = px.scatter(df, x='distance', y='moving_time', color='type')
-    fig.update_layout(title_text='Scatter plot of Distance vs Moving Time')
-    fig.update_xaxes(title_text='Type of activity')
-    fig.update_yaxes(title_text='Moving time (s)')
-    fig.write_image('src/data_visualisation/figures/plotly_figure.png')
+    #fig = px.scatter(df, x='distance', y='moving_time', color='type')
+    #fig.update_layout(title_text='Scatter plot of Distance vs Moving Time')
+    #fig.update_xaxes(title_text='Type of activity')
+    #fig.update_yaxes(title_text='Moving time (s)')
+    #fig.write_image('src/data_visualisation/figures/plotly_figure.png')
 
     # Geopandas
     df = preprocess_geo_data(csv_files)

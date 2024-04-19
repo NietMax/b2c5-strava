@@ -16,7 +16,7 @@ Temporary Items
 
 # Python virtual environment
 venv/
-.env/
+
 
 # Editor-specific files
 .vscode/
