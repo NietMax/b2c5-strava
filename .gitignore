@@ -14,8 +14,7 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-# Python virtual environment
-venv/
+
 
 
 # Editor-specific files
@@ -27,8 +26,7 @@ venv/
 __pycache__/
 node_modules/
 
-# env
-.env
+
 
 .pytest_cache
 
